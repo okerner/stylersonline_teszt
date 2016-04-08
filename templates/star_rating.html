@@ -1,0 +1,3 @@
+<div style='display: inline-block; margin: 0px; padding: 0px; cursor:pointer;' ng-repeat='idx in maxRatings track by $index'> 
+<img ng-src='{{((hoverValue + _rating) <= $index) && "/minicrm_test/images/star-empty-lg.png" || "/minicrm_test/images/star-fill-lg.png"}}' ng-Click='isolatedClick($index + 1)' ng-mouseenter='isolatedMouseHover($index + 1)' ng-mouseleave='isolatedMouseLeave($index + 1)'></img>
+</div>

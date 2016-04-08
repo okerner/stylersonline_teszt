@@ -1,0 +1,53 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fff;
+}
+
+#content {
+  min-height: 600px;
+}
+
+.clear {
+  clear: both;
+}
+
+.row treecontrol.tree-light li.tree-collapsed > i.tree-branch-head {
+    padding: 1px 10px;
+    background: url("../images/node-closed-2.png") no-repeat;
+    position: relative;
+    top: 41px;
+    left: 80px;
+}
+
+.row treecontrol.tree-light li.tree-expanded > i.tree-branch-head {
+    padding: 1px 10px;
+    background: url("../images/node-opened-2.png") no-repeat;
+    position: relative;
+    top: 41px;
+    left: 80px;
+}
+
+.footer {
+  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+  background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  color: #9d9d9d;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  line-height:30px;
+}
+    .footer p {
+        margin:0 auto;
+    }
+
+
+@media screen and (max-width: 480px) {
+  #new_rating {
+    width: 100%;
+  }
+}

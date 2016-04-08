@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Próbafeladat</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/tree-control.css">
+        <link rel="stylesheet" href="css/tree-control-attribute.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/angular-tree-control.js"></script>
+    </head>
+    <body ng-app="TreeViewApp">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    <a class="navbar-brand" href="/stylersonline_teszt/">Főoldal</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/stylersonline_teszt/"></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+            </div>
+            </nav>
+            <div class="container" ng-controller="TreeViewController">
+                <img src="/stylersonline_teszt/images/ajax-loader.gif" ng-show="!semafors.show_tree_section"></img>
+                <div class="row" ng-show="semafors.show_tree_section">
+                    <treecontrol class="tree-light"
+                        tree-model="binary_tree"
+                        options="tree_options"
+                        on-selection="showSelected(node)"
+                        selected-node="node1">
+                        <ul>
+                            <li ng-show="key != 'childs'" ng-repeat="(key,value) in node">{{key}} : {{value}}</li>
+                            
+                        </ul>
+                    </treecontrol>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; Created by Orsolya Kerner (<a href="mailto:kerner.orsi@gmail.com">kerner.orsi@gmail.com</a>)</p>
+            </div>
+        </footer>
+    </body>
+</html>
